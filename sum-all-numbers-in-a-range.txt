@@ -1,0 +1,12 @@
+function sumAll(arr) {
+  var result = 0;
+  var min = Math.min(arr[0], arr[1]);
+  var max = Math.max(arr[0], arr[1]);
+  for (let i = min; i <= max; i++) {
+    result += i;
+  }
+  console.log(result);
+  return result;
+}
+
+sumAll([1, 4]);
