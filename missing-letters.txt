@@ -1,0 +1,15 @@
+function fearNotLetter(str) {
+  var abc = 'abcdefghijklmnopqrstuvwxyz';
+  var len = str.length;
+  var start = abc.indexOf(str[0]);
+
+  for (var i = start; i < start + len; i++) {
+    if (!str.includes(abc[i])) {
+      return abc[i];
+    }
+  }  
+
+  return undefined;
+}
+
+fearNotLetter("abce");

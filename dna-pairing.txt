@@ -1,0 +1,28 @@
+function pairElement(str) {
+  var paired = [];
+
+  function searched(char) {
+    switch(char) {
+      case 'A':
+        paired.push(['A','T']);
+        break;
+      case 'T':
+        paired.push(['T','A']);
+        break;
+      case 'G':
+        paired.push(['G','C']);
+        break;
+      case 'C':
+        paired.push(['C','G']);
+        break;
+    }
+  }
+
+  for (var i = 0; i < str.length; i++) {
+    searched(str[i]);
+  }
+  console.log(paired);
+  return paired;
+}
+
+pairElement("GCG");
