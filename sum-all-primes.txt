@@ -1,0 +1,37 @@
+function sumPrimes(num) {
+  let result = 0;
+  let currNum = 1;
+  let isPrime = true;
+
+  function test_prime(n) {
+    if (n===1)
+    {
+      return false;
+    }
+    else if(n === 2)
+    {
+      return true;
+    }else
+    {
+      for(var x = 2; x < n; x++)
+      {
+        if(n % x === 0)
+        {
+          return false;
+        }
+      }
+      return true;  
+    }
+  }
+
+  for (let i = 2; i <= num; i++) {
+    if ((test_prime(i)) === true) {
+      result += i;
+    }
+  }
+
+  console.log(result);
+  return result;
+}
+
+sumPrimes(10);
