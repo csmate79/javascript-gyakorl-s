@@ -1,0 +1,18 @@
+function palindrome(str) {
+  var withoutSpace = str.replace(/(\s)|(\W)(\D)|(\_)|(\.)|(\-)/g, "").toLowerCase();
+  var newArr = withoutSpace.split("");
+  var palindrome = [];
+
+  for (var i = newArr.length - 1; i >= 0 ; i--) {
+    palindrome.push(newArr[i].toLowerCase());
+  }
+
+  console.log(palindrome.join("") + " " + newArr.join(""));      
+  console.log(palindrome.join("") == newArr.join(""));
+
+  return palindrome.join("") == newArr.join("");
+}
+
+
+
+palindrome("0_0 (: /-\ :) 0-0");
