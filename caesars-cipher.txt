@@ -1,0 +1,19 @@
+function rot13(str) {
+  var newArr = [];
+
+  for (var i = 0; i < str.length; i++) {
+    var char = str.charCodeAt(i);
+    console.log(char);
+    if (char < 65 || char > 90) {
+      newArr.push(str[i]);
+    } else if (char < 78) {
+      newArr.push(String.fromCharCode(char + 13));
+    } else {
+      newArr.push(String.fromCharCode(char - 13));
+    }
+  }
+  console.log(newArr.join(""));
+  return newArr.join("");
+}
+
+rot13("SERR CVMMN!");
