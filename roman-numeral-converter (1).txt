@@ -1,0 +1,77 @@
+function convertToRoman(num) {
+  var decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  var romanNumeral = [
+    "M",
+    "CM",
+    "D",
+    "CD",
+    "C",
+    "XC",
+    "L",
+    "XL",
+    "X",
+    "IX",
+    "V",
+    "IV",
+    "I"
+  ];
+
+  var toRoman = "";
+
+  for (var index = 0; index < decimalValue.length; index++) {
+    while (decimalValue[index] <= num) {
+      toRoman += romanNumeral[index];
+      num -= decimalValue[index];
+    }
+  }
+
+  return toRoman;
+};
+
+    /*while (i !== 0) {
+        if (i >= 900 && i < 1000) {
+            i -= 900;
+            toRoman += 'CM';
+        } else if (i >= 1000) {
+            i -= 1000;
+            toRoman += "M";
+        } else if (i >= 400 && i < 500) {
+            i -= 400;
+            toRoman += 'CD';
+        } else if (i >= 500 && i < 1000) {
+            i -= 500;
+            toRoman += 'D';
+        } else if (i >= 90 && i < 100) {
+            i-= 90;
+            toRoman += 'XC';
+        } else if (i >= 100 && i < 500) {
+            i -= 100;
+            toRoman += 'C';
+        } else if (i >= 40 && i < 50) {
+            i-= 40;
+            toRoman += 'XL';
+        } else if (i >= 50 && i < 100) {
+            i -= 50;
+            toRoman += 'L';
+        } else if (i >= 9 && i <= 9) {
+            i -= 9;
+            toRoman += 'IX';
+        } else if (i >= 10 && i < 50) {
+            i -= 10;
+            toRoman += 'X';
+        } else if (i >= 4 && i <= 4) {
+            i -= 4;
+            toRoman += 'IV';
+        } else if (i >= 5 && i < 10) {
+            i -= 5;
+            toRoman += 'V';
+        } else if (i >= 1 && i < 5) {
+            i -= 1;
+            toRoman += "I";
+        }
+    }
+    console.log(toRoman);
+ return toRoman;
+}*/
+
+convertToRoman(77);
